@@ -1,3 +1,74 @@
+console.log('Starting app.js');
+const http = new easyHTTP;
+/*
+const posts = http.get('https://jsonplaceholder.typicode.com/posts', function(error, posts) {
+  if (error) {
+    console.log(error);
+  }
+  else {
+  console.log(posts);
+  }
+});
+*/
+//console.log(posts);
+
+//create data
+const data = {
+  title: 'Custom Post',
+  body: "this is a custom post"
+};
+/*
+http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post) {
+  if(err) {
+    console.log(err);
+  }else {
+    console.log(post);
+  }
+})
+*/
+//create post
+http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(err, post) {
+  if(err) {
+    console.log(err);
+  }else {
+    console.log(post);
+  }
+})
+
+
+
+
+//Third Excercise
+/*
+const posts = [
+  {title: "post one", body:"This is post one"},
+  {title: "post two", body:"This is post two"}  
+]
+
+function createPost(post) {
+  setTimeout(function() {
+    posts.push(post);
+  }, 2000);
+}
+
+
+function getPosts() {
+  setTimeout(function() {
+    let output = '';
+    posts.forEach(function(post){
+      output += "<li>" + post.title + "<li>"
+    });
+    document.body.innerHTML = output;
+  }, 1000);
+}
+
+createPost({title:"post three", body:"This is post three"});
+getPosts();
+*/
+
+//Seconds Excercise 
+/*
+
 document.getElementById('button1').addEventListener('click', loadCustomer);
 document.getElementById('button2').addEventListener('click', loadCustomers);
 
@@ -55,9 +126,9 @@ function loadCustomers() {
   xhr.send();
 }
 
+*/
 
 /*
-
 //First excercise 
 document.getElementById('button').addEventListener('click', loadData);
 
